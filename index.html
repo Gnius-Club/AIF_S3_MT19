@@ -1,24 +1,276 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-S3-M19</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
-  <script src="script.js"></script>
-</body>
 
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook Misión 19: Cerrando el Bucle y Generando Datos</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="timer">⏱️ 00:00</span>
+                <button id="startStop">Start</button>
+                <button id="reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+
+            <div class="sidebar-info">
+                <p>💡 Esta misión se centra en la interacción Humano-IA y el concepto avanzado de Datos Sintéticos.</p>
+                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
+            </div>
+        </aside>
+
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+
+            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+
+            <!-- SECCIÓN "DE UN VISTAZO" -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
+                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
+                <div class="overview-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Objetivos, Secuencia y Entregable</th>
+                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Objetivos:</strong>
+                                    <ul>
+                                        <li>Que los estudiantes utilicen su Gemelo Digital como una herramienta interactiva para la toma de decisiones (Human-in-the-Loop).</li>
+                                        <li>Que conceptualicen cómo un Gemelo Digital validado puede ser usado para generar datos sintéticos.</li>
+                                        <li>Que comprendan cómo esta técnica se utiliza para el entrenamiento de otras IAs.</li>
+                                    </ul>
+                                    <strong>Secuencia de Clase:</strong>
+                                    <ul>
+                                        <li><strong class="tactic-highlight">⚡A.I. GYM:</strong> Análisis profundo y contextualización de la misión con Xolo.</li>
+                                        <li><strong class="tactic-highlight">⚡BRAIN SPARK (Conceptual):</strong> Interacción con el Gemelo Digital y diseño de un pipeline de datos sintéticos.</li>
+                                        <li><strong class="tactic-highlight">⚡CONSULTA CON IA:</strong> Uso de Xolo como socio conceptual para refinar el diseño del pipeline.</li>
+                                        <li><strong class="tactic-highlight">⚡GNIUS STORM:</strong> Showcase de diseños, síntesis de "insights" y reflexión sobre el proceso.</li>
+                                    </ul>
+                                    <strong>Entregable Clave:</strong>
+                                    <ul>
+                                        <li>Un diseño conceptual (discutido y refinado) de un pipeline de Machine Learning, que explique cómo usarían su Gemelo Digital para generar datos sintéticos y para qué entrenarían a una IA con ellos.</li>
+                                        <li>Comprensión demostrada del concepto de "Human-in-the-Loop" y de los beneficios y riesgos de los datos sintéticos.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <strong>Materiales Específicos:</strong>
+                                    <ul>
+                                        <li>Proyector o pantalla interactiva.</li>
+                                        <li>Conexión a internet estable.</li>
+                                        <li>Cuentas de ThingSpeak con un Gemelo Digital funcional de la misión anterior.</li>
+                                        <li>Sistemas físicos (Micro:bit, sensores, actuadores) funcionales.</li>
+                                        <li>Chat "Agente Gnius" (Xolo) operativo.</li>
+                                        <li>Presentación de diapositivas (Diapositivas 1-9).</li>
+                                    </ul>
+                                    <strong>Preparación Previa para ESTA Sesión:</strong>
+                                    <ol>
+                                        <li><strong>Verificación del Entorno Digital y Físico (Interna):</strong>
+                                            <ul>
+                                                <li>Asegurar que los estudiantes tengan sus sistemas físico-digitales listos y operativos.</li>
+                                            </ul>
+                                        </li>
+                                        <li><strong>Familiarización Conceptual y Técnica:</strong> Repasar en profundidad los conceptos de "Human-in-the-Loop" y "Datos Sintéticos". Preparar ejemplos claros y estar listo para guiar una discusión conceptual.</li>
+                                        <li><strong>Preparación de la Demostración Práctica:</strong> Tener un Gemelo Digital funcional y estar preparado para realizar una demostración en vivo de "cerrar el bucle": observar un dato en el Gemelo y actuar manualmente sobre el sistema físico.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
+
+            <div class="activity-card" id="activity-1">
+                <h2>⚡ Actividad 1: Saludo de IA y Contexto ⏰ 3 minutos</h2>
+                <p>Establecer el tono de la sesión, activar la IA y presentar el concepto de interacción bidireccional.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Bienvenida y Contexto Estratégico</h3>
+                            <p>(Proyectar Diapositiva 2) El facilitador da la bienvenida y presenta el enfoque de la misión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Buenos días, arquitectos. Han construido un sistema físico que envía datos y un Gemelo Digital que los visualiza. Hoy cerraremos el círculo. La interacción ya no será solo de lo físico a lo digital; usarán su Gemelo Digital para tomar una decisión y actuar. Además, exploraremos una idea de IA muy avanzada.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Activación y Personalización de Xolo</h3>
+                            <p>El facilitador guía a los alumnos para que inicien su sesión de trabajo individual.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Inicien su sesión con Xolo como de costumbre, compartiendo su perfil de aprendizaje e interés. Por ejemplo: <strong>'Hola Xolo. Soy David, perfil Ingeniero, y me interesa el control de sistemas a distancia.'</strong> Esto preparará a su socio de IA para la sesión. Procedan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-2">
+                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 2 minutos</h2>
+                <p>Clarificar la meta de aprendizaje enfocada en la interacción y la generación de datos.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: "I Can Statement" de Síntesis</h3>
+                            <p>(Proyectar Diapositiva 3) El facilitador presenta el objetivo de aprendizaje de la sesión.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">La meta de hoy es conceptual y de alto nivel. Al finalizar, podrán afirmar: <strong>'Yo puedo actuar como el "humano en el bucle" de un sistema y puedo diseñar un plan para usar un Gemelo Digital como una fábrica de datos sintéticos para entrenar otra IA.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-3">
+                <h2>⚡ Actividad 3: A.I. GYM (Bucle Humano y Datos Sintéticos) ⏰ 12 minutos</h2>
+                <p>Facilitar una sesión de aprendizaje sobre el rol del humano en sistemas de control y el concepto de datos sintéticos.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Instrucción para el Aprendizaje Conceptual</h3>
+                            <p>(Proyectar Diapositiva 4 y 5) El facilitador dirige a los alumnos para que aprendan sobre los conceptos clave.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Iniciamos el A.I. GYM. Su aprendizaje con Xolo hoy es doble. Primero, pregunten: <strong>'Xolo, ¿qué es el "bucle humano" (Human-in-the-Loop) en el contexto de un Gemelo Digital?'</strong> Luego, exploren el concepto de vanguardia: <strong>'Ahora, explícame qué son los "datos sintéticos" y por qué son importantes para la IA.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Supervisión y Guía del Facilitador</h3>
+                            <p>El facilitador circula, refuerza conceptos y sugiere preguntas de profundización.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">(Mientras circula) "La idea de generar datos 'falsos pero realistas' es muy potente. Para asegurar que entienden sus implicaciones, pregúntenle a Xolo: <strong>'¿Cuál es el mayor riesgo de entrenar una IA exclusivamente con datos sintéticos?'</strong> O, <strong>'¿En qué industrias, además de la automotriz, la generación de datos sintéticos es crucial?'</strong>"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-4">
+                 <h2>⚡ Actividad 4: Brain Spark (Interacción y Diseño Conceptual) ⏰ 20 minutos</h2>
+                <p>Los estudiantes interactúan con su sistema y diseñan un pipeline de Machine Learning.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Cerrando el Bucle Humano</h3>
+                             <p>(Proyectar Diapositiva 6) El facilitador guía a los estudiantes para que interactúen con su sistema físico a través del Gemelo Digital.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Ahora, la prueba de concepto. No hay código nuevo. Abran su Gemelo Digital en ThingSpeak y observen los datos que su sistema físico está enviando. Basándose en esos datos, tomen una decisión y actúen directamente sobre el sistema físico. Por ejemplo, si ven que la humedad es baja en su Gemelo, vayan y activen manualmente la bomba de agua. Experimenten ser el 'humano en el bucle'.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Diseño de un Pipeline de Datos Sintéticos</h3>
+                            <p>(Proyectar Diapositiva 7 y 8) Las parejas discuten y diseñan un plan para generar datos sintéticos y entrenar una IA.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                 <p class="dialogue assistant">Ahora, la parte conceptual. En sus parejas, discutan el siguiente escenario: imaginen que su Gemelo Digital es una simulación perfecta. ¿Cómo lo usarían para generar datos sintéticos? ¿Qué datos generarían? ¿Y para qué entrenarían a una segunda IA con esos datos? Una vez que tengan una idea, consúltenla con Xolo para refinarla. Por ejemplo: <strong>'Xolo, queremos simular diferentes niveles de luz para ver cómo afectan la humedad. Usaríamos esos datos para entrenar una IA que prediga las necesidades de riego.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-5">
+                <h2>⚡ Actividad 5: Gnius STORM (Reflexión) ⏰ 5 minutos</h2>
+                <p>El facilitador modera una reflexión final enfocada en las implicaciones de los sistemas de control y los datos sintéticos.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Gnius STORM (Think - Individual)</h3>
+                            <p>(Proyectar Diapositiva 9) Instrucción para la reflexión individual.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Bien, para cerrar, nuestro Think-Pair-Share. Individualmente, un minuto para pensar: ¿Cuáles son las ventajas y las responsabilidades de ser el 'humano en el bucle' de un sistema crítico, como un centro de control de una planta nuclear?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Gnius STORM (Pair - Parejas)</h3>
+                            <p>Los alumnos discuten los riesgos de los datos sintéticos.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Ahora, en parejas, discutan durante dos minutos: ¿Cuáles son los riesgos de usar datos sintéticos? ¿Qué pasaría si la simulación de su Gemelo Digital no es perfecta y entrenan a una IA con datos incorrectos?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 3: Gnius STORM (Share & Synthesis)</h3>
+                            <p>Algunas parejas comparten sus diseños de pipeline y el facilitador cierra la sesión.</p>
+                        </div>
+                        <div class="collapsible-content">
+                                <p class="dialogue assistant">Escuchemos a algunas parejas. Compartan el escenario de generación de datos sintéticos que diseñaron y qué tipo de IA entrenarían con ellos. (Escuchar respuestas). Hoy han alcanzado la cima conceptual de este módulo. Han conectado IoT, visualización, control y Machine Learning en un solo ecosistema. Esta visión holística es lo que define a un arquitecto tecnológico. Están listos para el gran desafío: su proyecto final.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
