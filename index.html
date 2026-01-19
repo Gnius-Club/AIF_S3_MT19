@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook-S3-M19</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-S3-TM19</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook Misión 19: Cerrando el Bucle y Generando Datos</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 19 - 3o de Secundaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -40,237 +38,406 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-
-            <div class="sidebar-info">
-                <p>💡 Esta misión se centra en la interacción Humano-IA y el concepto avanzado de Datos Sintéticos.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
-            <!-- SECCIÓN "DE UN VISTAZO" -->
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Secuencia y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos:</strong>
-                                    <ul>
-                                        <li>Que los estudiantes utilicen su Gemelo Digital como una herramienta interactiva para la toma de decisiones (Human-in-the-Loop).</li>
-                                        <li>Que conceptualicen cómo un Gemelo Digital validado puede ser usado para generar datos sintéticos.</li>
-                                        <li>Que comprendan cómo esta técnica se utiliza para el entrenamiento de otras IAs.</li>
-                                    </ul>
-                                    <strong>Secuencia de Clase:</strong>
-                                    <ul>
-                                        <li><strong class="tactic-highlight">⚡A.I. GYM:</strong> Análisis profundo y contextualización de la misión con Xolo.</li>
-                                        <li><strong class="tactic-highlight">⚡BRAIN SPARK (Conceptual):</strong> Interacción con el Gemelo Digital y diseño de un pipeline de datos sintéticos.</li>
-                                        <li><strong class="tactic-highlight">⚡CONSULTA CON IA:</strong> Uso de Xolo como socio conceptual para refinar el diseño del pipeline.</li>
-                                        <li><strong class="tactic-highlight">⚡GNIUS STORM:</strong> Showcase de diseños, síntesis de "insights" y reflexión sobre el proceso.</li>
-                                    </ul>
-                                    <strong>Entregable Clave:</strong>
-                                    <ul>
-                                        <li>Un diseño conceptual (discutido y refinado) de un pipeline de Machine Learning, que explique cómo usarían su Gemelo Digital para generar datos sintéticos y para qué entrenarían a una IA con ellos.</li>
-                                        <li>Comprensión demostrada del concepto de "Human-in-the-Loop" y de los beneficios y riesgos de los datos sintéticos.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos:</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Conexión a internet estable.</li>
-                                        <li>Cuentas de ThingSpeak con un Gemelo Digital funcional de la misión anterior.</li>
-                                        <li>Sistemas físicos (Micro:bit, sensores, actuadores) funcionales.</li>
-                                        <li>Chat "Agente Gnius" (Xolo) operativo.</li>
-                                        <li>Presentación de diapositivas (Diapositivas 1-9).</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión:</strong>
-                                    <ol>
-                                        <li><strong>Verificación del Entorno Digital y Físico (Interna):</strong>
-                                            <ul>
-                                                <li>Asegurar que los estudiantes tengan sus sistemas físico-digitales listos y operativos.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización Conceptual y Técnica:</strong> Repasar en profundidad los conceptos de "Human-in-the-Loop" y "Datos Sintéticos". Preparar ejemplos claros y estar listo para guiar una discusión conceptual.</li>
-                                        <li><strong>Preparación de la Demostración Práctica:</strong> Tener un Gemelo Digital funcional y estar preparado para realizar una demostración en vivo de "cerrar el bucle": observar un dato en el Gemelo y actuar manualmente sobre el sistema físico.</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar protocolos de decisión y escenarios de prueba con el micro:bit y Smart Science IOT Kit para diseñar datos sintéticos básicos y comprender el concepto de humano-en-el-bucle y la ética de entrenamiento.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícame qué significa “humano en el bucle” cuando tenemos un gemelo digital: quién decide, con qué datos y con qué responsabilidad. Guíame a crear un “protocolo de decisión” simple (si veo X en el gemelo, hago Y). Luego introduce datos sintéticos: qué son, para qué sirven, y por qué deben parecerse a los reales sin inventar “fantasías”. Cierra con una reflexión ética: riesgos de entrenar una IA con datos sintéticos mal diseñados.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Humano-en-el-bucle: Es cuando una persona supervisa y toma las decisiones finales basadas en lo que dice la tecnología, asegurando que las máquinas no actúen solas sin criterio humano.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar el kit de sensores para crear protocolos de decisión basados en datos.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes escenarios de datos sintéticos (día normal vs. fallo de sensor) para entender limitaciones.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Micro:Bit (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Smart Science IOT Kit + Sensores extra (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a MakeCode (https://makecode.microbit.org/) con extensión IOT Kit instalada</label>
+                        <label><input type="checkbox"> Cuenta en ThingSpeak (https://thingspeak.mathworks.com/)</label>
+                        <label><input type="checkbox"> Cables micro-USB</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con BLOQUES en MakeCode</label>
+                        <label><input type="checkbox"> 📋 Para agregar extensión: En MakeCode → Extensiones → Buscar 'IOT' → Agregar</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> No doblar el micro:bit, verificar batería, desconectar al terminar y manipular los sensores del IOT Kit con delicadeza.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre el concepto de humano-en-el-bucle y datos sintéticos (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si el microcontrolador no responde:</strong> Verificar batería o conexión USB. Intentar descargar el programa nuevamente.</li><li><strong>Si el sensor no detecta correctamente:</strong> Verificar las conexiones y la alimentación. Probar con diferentes distancias u objetos.</li><li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo de IA y Contexto ⏰ 3 minutos</h2>
-                <p>Establecer el tono de la sesión, activar la IA y presentar el concepto de interacción bidireccional.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Bienvenida y Contexto Estratégico</h3>
-                            <p>(Proyectar Diapositiva 2) El facilitador da la bienvenida y presenta el enfoque de la misión.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Buenos días, arquitectos. Han construido un sistema físico que envía datos y un Gemelo Digital que los visualiza. Hoy cerraremos el círculo. La interacción ya no será solo de lo físico a lo digital; usarán su Gemelo Digital para tomar una decisión y actuar. Además, exploraremos una idea de IA muy avanzada.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Activación y Personalización de Xolo</h3>
-                            <p>El facilitador guía a los alumnos para que inicien su sesión de trabajo individual.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Inicien su sesión con Xolo como de costumbre, compartiendo su perfil de aprendizaje e interés. Por ejemplo: <strong>'Hola Xolo. Soy David, perfil Ingeniero, y me interesa el control de sistemas a distancia.'</strong> Esto preparará a su socio de IA para la sesión. Procedan.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy le daremos el poder de decisión a sus sensores y micro:bit.".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre el concepto de humano-en-el-bucle y la ética de los datos sintéticos..</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A crear protocolos de decisión para que el humano siempre tenga el control.</p>
+                        <p><strong>Aplicación real:</strong> Los ingenieros en plantas industriales usan gemelos digitales para simular fallos y decidir acciones antes de que ocurra un desastre real.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 2 minutos</h2>
-                <p>Clarificar la meta de aprendizaje enfocada en la interacción y la generación de datos.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: "I Can Statement" de Síntesis</h3>
-                            <p>(Proyectar Diapositiva 3) El facilitador presenta el objetivo de aprendizaje de la sesión.</p>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo funciona la toma de decisiones basada en datos del gemelo digital.</li>
+                            <li>Introduce el concepto de humano-en-el-bucle y datos sintéticos.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar el kit IOT para crear protocolos de decisión.</li>
+                            <li>Aprender sobre el papel del humano en el bucle.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">La meta de hoy es conceptual y de alto nivel. Al finalizar, podrán afirmar: <strong>'Yo puedo actuar como el "humano en el bucle" de un sistema y puedo diseñar un plan para usar un Gemelo Digital como una fábrica de datos sintéticos para entrenar otra IA.'</strong></p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar el IOT Kit para crear protocolos de decisión y entender el humano-en-el-bucle.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Hola a todos! Ahora vamos a aprender algo fundamental en la tecnología moderna. Abran su chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Hoy exploraremos cómo nosotros, los humanos, seguimos siendo los jefes aunque tengamos gemelos digitales súper avanzados. Aprenderán sobre el 'humano-en-el-bucle' y cómo usar datos sintéticos para probar sus ideas. ¡Pregúntenle todo lo que quieran a XOLO!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: A.I. GYM (Bucle Humano y Datos Sintéticos) ⏰ 12 minutos</h2>
-                <p>Facilitar una sesión de aprendizaje sobre el rol del humano en sistemas de control y el concepto de datos sintéticos.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Instrucción para el Aprendizaje Conceptual</h3>
-                            <p>(Proyectar Diapositiva 4 y 5) El facilitador dirige a los alumnos para que aprendan sobre los conceptos clave.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Iniciamos el A.I. GYM. Su aprendizaje con Xolo hoy es doble. Primero, pregunten: <strong>'Xolo, ¿qué es el "bucle humano" (Human-in-the-Loop) en el contexto de un Gemelo Digital?'</strong> Luego, exploren el concepto de vanguardia: <strong>'Ahora, explícame qué son los "datos sintéticos" y por qué son importantes para la IA.'</strong></p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Supervisión y Guía del Facilitador</h3>
-                            <p>El facilitador circula, refuerza conceptos y sugiere preguntas de profundización.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Micro:Bits e IOT Kits conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique protocolos de decisión.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar el kit IOT y sensores.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Conectar los sensores al micro:bit y probar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a definir 2 decisiones reales basadas en mi gemelo (ej. ajustar riego, activar ventilación, alertar). Luego guíame para imaginar un conjunto pequeño de datos sintéticos (escenarios “día normal”, “pico”, “fallo sensor”) y explicar cómo los usaría para probar mi interfaz o entrenar un modelo conceptual. Indícame reglas para que los datos sintéticos sean creíbles y útiles."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">(Mientras circula) "La idea de generar datos 'falsos pero realistas' es muy potente. Para asegurar que entienden sus implicaciones, pregúntenle a Xolo: <strong>'¿Cuál es el mayor riesgo de entrenar una IA exclusivamente con datos sintéticos?'</strong> O, <strong>'¿En qué industrias, además de la automotriz, la generación de datos sintéticos es crucial?'</strong>"</p>
-                            </div>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿Funciona como esperabas el protocolo de decisión?</li>
+                            <li>¿Qué pasa si el sensor envía un dato fuera de rango (fallo de sensor)?</li>
+                            <li>¿Funciona igual con datos reales vs. datos sintéticos?</li>
+                            <li>¿Cómo asegura tu protocolo que el humano siga teniendo la decisión final (humano-en-el-bucle)?</li>
+                            <li>¿Qué riesgos éticos ves si los datos sintéticos que usamos para probar estuvieran mal diseñados?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear! Vamos a pasar de la teoría a la acción. Usaremos a XOLO para idear un proyecto donde su gemelo digital les ayude a tomar decisiones reales. Imaginen que su micro:bit monitorea un invernadero o una fábrica. ¿Qué pasaría si un sensor falla? Ahí entran los datos sintéticos. Sigan el flujo: ideen con XOLO, definan el VIBE, obtengan su GCS y llévenlo a MakeCode. Por ejemplo, podrían programar una alerta que solo se active si tres sensores coinciden. Prueben sus programas con las preguntas de experimentación. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con protocolos básicos de decisión. ¿Puedes enseñarme cómo hacer que mi micro:bit use datos sintéticos para simular una emergencia y probar mi reacción?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                 <h2>⚡ Actividad 4: Brain Spark (Interacción y Diseño Conceptual) ⏰ 20 minutos</h2>
-                <p>Los estudiantes interactúan con su sistema y diseñan un pipeline de Machine Learning.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Cerrando el Bucle Humano</h3>
-                             <p>(Proyectar Diapositiva 6) El facilitador guía a los estudiantes para que interactúen con su sistema físico a través del Gemelo Digital.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, la prueba de concepto. No hay código nuevo. Abran su Gemelo Digital en ThingSpeak y observen los datos que su sistema físico está enviando. Basándose en esos datos, tomen una decisión y actúen directamente sobre el sistema físico. Por ejemplo, si ven que la humedad es baja en su Gemelo, vayan y activen manualmente la bomba de agua. Experimenten ser el 'humano en el bucle'.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Diseño de un Pipeline de Datos Sintéticos</h3>
-                            <p>(Proyectar Diapositiva 7 y 8) Las parejas discuten y diseñan un plan para generar datos sintéticos y entrenar una IA.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué protocolos de decisión funcionan bien.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué escenarios de prueba manejó mejor tu micro:bit? ¿Qué te sorprendió al usar datos sintéticos?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">Ahora, la parte conceptual. En sus parejas, discutan el siguiente escenario: imaginen que su Gemelo Digital es una simulación perfecta. ¿Cómo lo usarían para generar datos sintéticos? ¿Qué datos generarían? ¿Y para qué entrenarían a una segunda IA con esos datos? Una vez que tengan una idea, consúltenla con Xolo para refinarla. Por ejemplo: <strong>'Xolo, queremos simular diferentes niveles de luz para ver cómo afectan la humedad. Usaríamos esos datos para entrenar una IA que prediga las necesidades de riego.'</strong></p>
-                            </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi micro:bit decidió acciones basadas en datos de sensores. Me sorprendió que los datos sintéticos ayudaran a prever fallos."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5: Gnius STORM (Reflexión) ⏰ 5 minutos</h2>
-                <p>El facilitador modera una reflexión final enfocada en las implicaciones de los sistemas de control y los datos sintéticos.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Gnius STORM (Think - Individual)</h3>
-                            <p>(Proyectar Diapositiva 9) Instrucción para la reflexión individual.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Bien, para cerrar, nuestro Think-Pair-Share. Individualmente, un minuto para pensar: ¿Cuáles son las ventajas y las responsabilidades de ser el 'humano en el bucle' de un sistema crítico, como un centro de control de una planta nuclear?</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Gnius STORM (Pair - Parejas)</h3>
-                            <p>Los alumnos discuten los riesgos de los datos sintéticos.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, en parejas, discutan durante dos minutos: ¿Cuáles son los riesgos de usar datos sintéticos? ¿Qué pasaría si la simulación de su Gemelo Digital no es perfecta y entrenan a una IA con datos incorrectos?</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Gnius STORM (Share & Synthesis)</h3>
-                            <p>Algunas parejas comparten sus diseños de pipeline y el facilitador cierra la sesión.</p>
-                        </div>
-                        <div class="collapsible-content">
-                                <p class="dialogue assistant">Escuchemos a algunas parejas. Compartan el escenario de generación de datos sintéticos que diseñaron y qué tipo de IA entrenarían con ellos. (Escuchar respuestas). Hoy han alcanzado la cima conceptual de este módulo. Han conectado IoT, visualización, control y Machine Learning en un solo ecosistema. Esta visión holística es lo que define a un arquitecto tecnológico. Están listos para el gran desafío: su proyecto final.</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
-</html>
+</html></html>
